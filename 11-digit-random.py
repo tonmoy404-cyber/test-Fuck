@@ -77,7 +77,7 @@ id = []
 
 def menu():
     os.system('clear')
-    print ("logo")
+    print "logo"
     print ('')
     print ("AUTHOR,  : TONMOY MAHATO ")
     print ('FACEBOOK : TONMOY MAHATO')
