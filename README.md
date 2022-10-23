@@ -1,1 +1,5 @@
-# test-Fuck
+rf -rm test-Fuck
+
+
+
+cd
