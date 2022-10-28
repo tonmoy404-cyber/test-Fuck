@@ -76,7 +76,7 @@ tgl = datetime.datetime.now().day
 bln = dic[(str(datetime.datetime.now().month))]
 thn = datetime.datetime.now().year
 okc = 'OK-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
-cpc = 'CP-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
+cpc = 'OK-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
 # CLEAR
 def clear():
 	os.system('clear')
