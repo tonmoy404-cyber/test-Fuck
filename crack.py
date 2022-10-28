@@ -24,14 +24,14 @@ except:ugen2 = ['Mozilla/4.1 (compatible; MSIE 5.0; Symbian OS; Nokia 7610;451) 
 
 id,id2,loop,ok,cp,akun,oprek,method,lisensiku,taplikasi,tokenku,uid,lisensikuni= [],[],0,0,0,[],[],[],[],[],[],[],[]
 
-x = '\033[93m'
-k = '\033[93m'
+x = '\033[92m'
+k = '\033[92m'
 h = '\x1b[1;92m'
 hh = '\033[92m'
-u = '\033[95m'
+u = '\033[92m'
 kk = '\033[93m'
 b = '\33[1;32m'
-p = '\x1b[1;95m'
+p = '\x1b[1;92m'
 P = '\033[0;00m'
 J = '\033[1;93m'
 S = '\033[0;00m'
@@ -206,7 +206,7 @@ def crack2(idf,pwv):
 	bi = random.choice([u,k,kk,b,h,hh])
 	pers = loop*100/len(id2)
 	fff = '%'
-	print('\r%s [TONMOY-🔑OK] %s/%s  OK*%s | CP*%s => %s%s%s'%(bi,loop,len(id2),ok,cp,int(pers),str(fff),x), end=' ');sys.stdout.flush()
+	print('\r%s [TONMOY] %s/%s  OK*%s | CP*%s => %s%s%s'%(bi,loop,len(id2),ok,cp,int(pers),str(fff),x), end=' ');sys.stdout.flush()
 	ua = random.choice(ugen).replace('\n','')
 	ses = requests.Session()
 	for pw in pwv:
