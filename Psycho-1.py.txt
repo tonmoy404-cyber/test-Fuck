@@ -4438,7 +4438,4 @@ def f_p_pass():
     print 39*'-'
     print ''
     raw_input(' Press Enter To Back ')
-    fb_menu()
-    os.system ('rm- rf token.txt')
-
-
+    
