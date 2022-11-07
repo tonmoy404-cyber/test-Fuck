@@ -79,7 +79,7 @@ def main_apv():
         print ("           Copy korbi Tor maa Xudmu Magir put")
         print ("     Kisu lagbo Subscription Type kor")
         raw_input (" Termux Dehke Exit Dw ber hote Parbah ")
-        os.system("xdg-open https://github.com/tonmoy404-cyber")
+        os.system("xdg-open https://wa.me/+8801926890544")
         
     r1=requests.get("https://github.com/tonmoy404-cyber/approval.txt").text
     if key1 in r1:
