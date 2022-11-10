@@ -18,30 +18,6 @@ class jalan:
 
 
 
-def ud():
-    os.system('clear')
-    jalan(logo)
-    print(' [1] SUBSCRIBE MY CHANNEL')
-    print(' [2] EXIT')
-    opt = input('\n   Choose option >>> ')
-    if opt == '1':
-        os.system('xdg-open https://youtube.com/channel/UCzc-ArnXynlC_QjrDWCQ9eg')
-        FD()
-        return None
-    None('\n\x1b[1;31mEXIT\x1b[0;96m')
-
-
-def FD():
-    os.system('clear')
-    print(logo)
-    print('\x1b[1;32m [1] VITORE JW')
-    print(' [2] EXIT')
-    opt = input('\n  \x1b[1;37m Choose option >>> ')
-    if opt == '1':
-        os.system('https://youtube.com/channel/UCzc-ArnXynlC_QjrDWCQ9eg')
-        o()
-        return None
-    None('\n\x1b[1;31mEXIT\x1b[0;96m')
 
 
 def o():
