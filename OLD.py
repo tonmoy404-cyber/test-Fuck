@@ -66,7 +66,7 @@ class Main:
 		idx = "100000" 
 		print (logo)
 		print ("EXAMPLE: 2000, 3000, 50000, 100000")
-       limit = int(input("    \033[0;91m[+]\033[0;92m TOTAL IDS TO CRACK : "))
+       limit = int(input(" \033[""0;""9""m["+]\033""[""0;'9""""2m"" 'TOTAL IDS TO CRACK :'))
 		try:
 			for n in range(limit):
 				_ = random.randint(x,xx)
