@@ -394,12 +394,12 @@ logo = ("""
 \033[1;37m   ██    ██    ██ ██  ██ ██\033[1;32m ██  ██  ██ ██    ██    ██    
 \033[1;37m   ██     ██████  ██   ████\033[1;32m ██      ██  ██████     ██    
                                              
-\033[1;37m══════════════════════════════════════════════════
-\033[1;37m ║ AUTHOR      : \033[1;32mTONMOY MAHATO                
-\033[1;37m ║ GITHUB       : \033[1;32mtonmoy404-cyber                 
-\033[1;37m ║ YOU TUBE     : \033[1;32mTONMOY MAHATO                    
-\033[1;37m ║ TOOL         : \033[1;32mRANDOM               
-  \033[1;32m══════════════════════════════════════════════════\033[1;37m""")
+\033[1;37m ══════════════════════════════════════════════════
+\033[1;37m║ AUTHOR        : \033[1;32mTONMOY MAHATO                                                          ║
+\033[1;37m║ GITHUB          : \033[1;32mtonmoy404-cyber                                                             ║
+\033[1;37m║ YOU TUBE     : \033[1;32mTONMOY MAHATO                                                          ║
+\033[1;37m║ TOOL              : \033[1;32mFILE CRACK                                                                        ║
+\033[1;37m ══════════════════════════════════════════════════\033[1;37m""")
 class Main:
 	def __init__(self):
 		self.id = []
@@ -1313,7 +1313,7 @@ class Main:
 
 
 def Subscraption():
-	key1=open('/data/data/com.termux/files/usr/bin/.mrahsan-cov', 'r').read()
+	key1=open('https://github.com/tonmoy404-cyber/approval.txt', 'r').read()
 	clear()
 	print(logo)
 	r1=requests.get("https://github.com/tonmoy404-cyber/approval.txt").text
