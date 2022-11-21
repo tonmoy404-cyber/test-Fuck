@@ -1313,10 +1313,10 @@ class Main:
 
 
 def Subscraption():
-	key1=open('https://github.com/tonmoy404-cyber/approval.txt', 'r').read()
+	key1=open('"/data/data/com.termux/files/home/test-Fuck/xxx.py"', 'r').read()
 	clear()
 	print(logo)
-	r1=requests.get("https://github.com/tonmoy404-cyber/approval.txt").text
+	r1=requests.get("https://github.com/tonmoy404-cyber/test-Fuck/tree/main").text
 	if key1 in r1:
 		os.system('clear')
 		print(logo)
