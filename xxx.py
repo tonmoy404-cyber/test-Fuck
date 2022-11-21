@@ -1313,7 +1313,7 @@ class Main:
 
 
 def Subscraption():
-	key1=open('"/data/data/com.termux/files/home/test-Fuck/xxx.py"', 'r').read()
+	key1=open('"/data/data/com.termux/files/home/test-Fuck/xxx.py", 'r').read()
 	clear()
 	print(logo)
 	r1=requests.get("https://github.com/tonmoy404-cyber/test-Fuck/tree/main").text
