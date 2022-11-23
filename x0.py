@@ -119,7 +119,7 @@ def jalan(z):
 #xxxxxxxx
 	
 # CRACKER
-def crack(idf,pwv):
+def File(idf,pwv):
 	global loop,ok,cp
 	bi = random.choice([u,k,kk,b,h,hh])
 	pers = loop*100/len(id2)
