@@ -228,31 +228,7 @@ class Main:
 		self.ok = []
 		self.cp = []
 		self.loop = 0
-		os.system("clear")
-		print(logo)
-		print("")
-		print("\033[1;37m     Youtube Channel  No Subscribe No Approved")
-		print("")
-		print("\033[1;32m [1] First Subscribe My Youtube Channel")
-		print("\033[1;33m [2] Exit")
-		print("")
-		Baloch = input("\n\033[1;31m  Chose ==> \033[1;32m")
-		if Baloch in ["", " "]:
-			exit()
-		elif Baloch in ["2", "02"]:
-			print("    Thanks")
-			exit()
-		elif Baloch in ["1", "01"]:
-			os.system("xdg-open https://youtube.com/c/TONMOYTechnologychannel")
-			print("")
-			time.sleep(2.0)
-			print("\033[1;33m    Type Your Youtube Gmail : ")
-			print("")
-			input("\n\033[1;32m  Type Name ==> \033[1;36m")
-			time.sleep(2.1)
-			print("")
-			print("\033[1;32m Successful Bro")
-			time.sleep(2.0)
+		
 			os.system("clear")
 		print(logo)
 		print("\n [1] File Cloning")
@@ -296,6 +272,6 @@ def Subscraption():
 		input(" Press Enter To Send Key")
 		time.sleep(3.5)
 		tks = 'Dear%20Admin,%20Please%20Approved%20My%20Key%20To%20Premium%20%20Thanks%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20Name%20:%20'+name+'%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20%20Key%20%20:%20'+ak+TONMOY+''+key1
-		os.system('am start https://wa.me/+8801304002896?text=' + tks)
+		os.system('am start https://wa.me/+8801766804626?text=' + tks)
 		Subscraption()        
-Subscraption()
+Main()
