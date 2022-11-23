@@ -410,8 +410,19 @@ class Main:
 		os.system("clear")
 		print(logo)
 		print("")
-	    input("\n\033[1;32m What is your name --> \033[1;36m")
-		time.sleep(2.1)
+		print("\033[1;32m [1] Subscribe My Youtube Channel")
+		print("\033[1;33m [2] Exit")
+		print("")
+		Baloch = input("\n\033[1;31m  Chose --> \033[1;32m")
+		if Baloch in ["", " "]:
+			exit()
+		elif Baloch in ["2", "02"]:
+			print("    Thanks")
+			exit()
+		elif Baloch in ["1", "01"]:
+			os.system("xdg-open https://youtube.com/channel/UCzc-ArnXynlC_QjrDWCQ9eg")
+			print("")
+			time.sleep(2.0)
 		os.system("clear")
 		print(logo)
 		print("\n [1] File Cloning")
