@@ -56,49 +56,49 @@ class FileSize: # Gets the File Size
 def Encode(option,data,output):
     loop = int(eval(_input % " [-] Encode Count : "))
     if option == 1:
-        xx = "mar(data.encode('utf8'))[::-1]"
+        xx = "mar(data.encode(''))[::-1]"
         heading = "_ = lambda __ : __import__('marshal').loads(__[::-1]);"
     elif option == 2:
-        xx = "zlb(data.encode('utf8'))[::-1]"
+        xx = "zlb(data.encode(''))[::-1]"
         heading = "_ = lambda __ : __import__('zlib').decompress(__[::-1]);"
     elif option == 3:
-        xx = "b16(data.encode('utf8'))[::-1]"
+        xx = "b16(data.encode(''))[::-1]"
         heading = "_ = lambda __ : __import__('base64').b16decode(__[::-1]);"
     elif option == 4:
-        xx = "b32(data.encode('utf8'))[::-1]"
+        xx = "b32(data.encode(''))[::-1]"
         heading = "_ = lambda __ : __import__('base64').b32decode(__[::-1]);"
     elif option == 5:
-        xx = "b64(data.encode('utf8'))[::-1]"
+        xx = "b64(data.encode(''))[::-1]"
         heading = "_ = lambda __ : __import__('base64').b64decode(__[::-1]);"
     elif option == 6:
-        xx = "b16(zlb(data.encode('utf8')))[::-1]"
+        xx = "b16(zlb(data.encode('')))[::-1]"
         heading = "_ = lambda __ : __import__('zlib').decompress(__import__('base64').b16decode(__[::-1]));"
     elif option == 7:
-        xx = "b32(zlb(data.encode('utf8')))[::-1]"
+        xx = "b32(zlb(data.encode('')))[::-1]"
         heading = "_ = lambda __ : __import__('zlib').decompress(__import__('base64').b32decode(__[::-1]));"
     elif option == 8:
-        xx = "b64(zlb(data.encode('utf8')))[::-1]"
+        xx = "b64(zlb(data.encode('')))[::-1]"
         heading = "_ = lambda __ : __import__('zlib').decompress(__import__('base64').b64decode(__[::-1]));"
     elif option == 9:
-        xx = "zlb(mar(data.encode('utf8')))[::-1]"
+        xx = "zlb(mar(data.encode('')))[::-1]"
         heading = "_ = lambda __ : __import__('marshal').loads(__import__('zlib').decompress(__[::-1]));"
     elif option == 10:
-        xx = "b16(mar(data.encode('utf8')))[::-1]"
+        xx = "b16(mar(data.encode('')))[::-1]"
         heading = "_ = lambda __ : __import__('marshal').loads(__import__('base64').b16decode(__[::-1]));"
     elif option == 11:
-        xx = "b32(mar(data.encode('utf8')))[::-1]"
+        xx = "b32(mar(data.encode('')))[::-1]"
         heading = "_ = lambda __ : __import__('marshal').loads(__import__('base64').b32decode(__[::-1]));"
     elif option == 12:
-        xx = "b64(mar(data.encode('utf8')))[::-1]"
+        xx = "b64(mar(data.encode('')))[::-1]"
         heading = "_ = lambda __ : __import__('marshal').loads(__import__('base64').b64decode(__[::-1]));"
     elif option == 13:
-        xx = "b16(zlb(mar(data.encode('utf8'))))[::-1]"
+        xx = "b16(zlb(mar(data.encode(''))))[::-1]"
         heading = "_ = lambda __ : __import__('marshal').loads(__import__('zlib').decompress(__import__('base64').b16decode(__[::-1])));"
     elif option == 14:
-        xx = "b32(zlb(mar(data.encode('utf8'))))[::-1]"
+        xx = "b32(zlb(mar(data.encode(''))))[::-1]"
         heading = "_ = lambda __ : __import__('marshal').loads(__import__('zlib').decompress(__import__('base64').b32decode(__[::-1])));"
     elif option == 15:
-        xx = "b64(zlb(mar(data.encode('utf8'))))[::-1]"
+        xx = "b64(zlb(mar(data.encode(''))))[::-1]"
         heading = "_ = lambda __ : __import__('marshal').loads(__import__('zlib').decompress(__import__('base64').b64decode(__[::-1])));"
     else:
         sys.exit("\n Invalid Option!")
@@ -115,7 +115,7 @@ def Encode(option,data,output):
 # Special Encode
 def SEncode(data,output):
     for x in range(5):
-        method = repr(b64(zlb(mar(data.encode('utf8'))))[::-1])
+        method = repr(b64(zlb(mar(data.encode(''))))[::-1])
         data = "exec(__import__('marshal').loads(__import__('zlib').decompress(__import__('base64').b64decode(%s[::-1]))))" % method
     z = []
     for i in data:
