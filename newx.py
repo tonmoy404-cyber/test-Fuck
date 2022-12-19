@@ -1,6 +1,5 @@
 from os import path
 import os,base64,zlib,pip,urllib
-os.system('xdg-open https://facebook.com/groups/351076900316263/')
 print('\n\033[1;37m install modules...\n It will take some seconds...')
 
 try:
@@ -77,7 +76,7 @@ def menu():
                         xd=input(' Choose an option: ')
                         if xd in ['1','01']:
                                 clear()
-                                print(' Put file example:  /sdcard/File.txt  etc..')
+                                print(' Put file example:  /sdcard/your-File-name.txt ..')
                                 linex()
                                 file = input(' Put file path\033[1;32m: ')
                                 try:
@@ -177,10 +176,10 @@ def menu():
 def pak():
                 user=[]
                 clear()
-                print('\033[1;31m Code example: 0306,0315,0335,0345')
+                print('\033[1;32m Code example: \033[1;37m0306,0315,0335,0345')
                 code = input('\033[1;37m put code: ')
                 try:
-                        limit = int(input('\033[1;31m example: 2000, 3000, 5000, 10000\n\033[1;37m put limit: '))
+                        limit = int(input('\033[1;32m example: \033[1;37m2000, 3000, 5000, 10000\n\033[1;32m put limit: '))
                 except ValueError:
                         limit = 5000
                 for nmbr in range(limit):
