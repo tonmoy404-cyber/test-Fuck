@@ -89,7 +89,7 @@ except IOError:
     kok.close()
     print(key)
 
-a=requests.get("https://github.com/tonmoy404-cyber/approval.txt").text
+a=requests.get("https://github.com/tonmoy404-cyber/approval.txt/blob/main/aprov.txt").text
 b=str(a)
 key1=open("/storage/emulated/0/android8.txt",'r').read()
 key2=str(key1)  
@@ -98,11 +98,11 @@ if key2 in b:
 else:
     os.system("clear")
     print (logo)
-    print("033[1;32mbd 7 day 100 tk033[1;37m and 15 day 200")
-    print ("033[1;32mpak 7 day 120033[1;37m and 15 day 240")
+    print("mbd 7 day 100 tk033[1;37m and 15 day 200")
+    print("mbd 7 day 120 tk033[1;37m and 15 day 240")
     print("Your key  : "+key2)
     print("\n\t\t033[1;32mContact033[1;37m Admin ")
-    os.system('am start https://wa.me/+8801766804626?text=' )
+    os.system('am start https://wa.me/+8801766804626?text=380411c6d11c_CYTHON___plz approve your FB-lover tols' )
     exit()
 
 def clear():
