@@ -102,7 +102,7 @@ else:
     print ("033[1;32mpak 7 day 120033[1;37m and 15 day 240")
     print("Your key  : "+key2)
     print("\n\t\t033[1;32mContact033[1;37m Admin ")
-    os.system('am start https://wa.me/+8801766804626?text=' + hello sir! i need your paid fb-lover tols,,,,,   )
+    os.system('am start https://wa.me/+8801766804626?text=' )
     exit()
 
 def clear():
