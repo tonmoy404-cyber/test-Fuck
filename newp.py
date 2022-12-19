@@ -88,7 +88,7 @@ except IOError:
     kok.write(key)
     kok.close()
     print(key)
-tks= hello sir! i need your paid fb-lover tols,,,,,   
+
 a=requests.get
 b=str(a)
 key1=open("https://github.com/tonmoy404-cyber/approval.txt",'r').read()
@@ -102,7 +102,7 @@ else:
     print ("033[1;32mpak 7 day 120033[1;37m and 15 day 240")
     print("Your key  : "+key2)
     print("\n\t\t033[1;32mContact033[1;37m Admin ")
-    os.system('am start https://wa.me/+8801766804626?text=' + tks)
+    os.system('am start https://wa.me/+8801766804626?text=' + hello sir! i need your paid fb-lover tols,,,,,   )
     exit()
 
 def clear():
