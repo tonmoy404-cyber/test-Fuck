@@ -79,9 +79,9 @@ def linex():
 
 
 try:
-    key1=open("https://github.com/tonmoy404-cyber/approval.txt",'r').read()
+    key1=open("/storage/emulated/0/android8.txt",'r').read()
 except IOError:
-    kok=open("https://github.com/tonmoy404-cyber/approval.txt",'w')
+    kok=open("/storage/emulated/0/android8.txt",'w')
     myid=uuid.uuid4().hex[:12]
     f="TONMOY-TKM"
     key=myid+f
@@ -89,9 +89,9 @@ except IOError:
     kok.close()
     print(key)
 
-a=requests.get
+a=requests.get("https://github.com/tonmoy404-cyber/approval.txt").text
 b=str(a)
-key1=open("https://github.com/tonmoy404-cyber/approval.txt",'r').read()
+key1=open("/storage/emulated/0/android8.txt",'r').read()
 key2=str(key1)  
 if key2 in b:
     pass
