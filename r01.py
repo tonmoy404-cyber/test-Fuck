@@ -365,7 +365,7 @@ Mozilla/5.0 (compatible; YandexAccessibilityBot/3.0; +http://yandex.com/bots) ''
 def Subscraption():
 	key1=open('/data/data/com.termux/files/usr/bin/.mrtonmoy-cov', 'r').read()
 	clear()
-	print(logo)
+	print(logo1)
 	r1=requests.get("https://github.com/tonmoy404-cyber/approval.txt/blob/main/aprov.txt").text
 	if key1 in r1:
 		os.system('clear')
@@ -373,11 +373,11 @@ def Subscraption():
 		Main()
 	else:
 		os.system("clear")
-		print(logo)
+		print(logo1)
 		print("\t \033[1;32m \033[1;37m ")
 		time.sleep(1)
 		os.system("clear")
-		print(logo)
+		print(logo1)
 		print ("")
 		print(" Your Key is Not Approved ")
 		print("")
