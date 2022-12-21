@@ -370,7 +370,7 @@ def Subscraption():
 	if key1 in r1:
 		os.system('clear')
 		print(logo1)
-		Main()
+		o()
 	else:
 		os.system("clear")
 		print(logo1)
@@ -391,6 +391,6 @@ def Subscraption():
 		time.sleep(3.5)
 		tks = 'Hello%20sir,%20Please%20Approved%20My%20Key%20To%20Premium%20%20Thanks%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20Name%20:%20'+name+'%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20%20Key%20%20:%20'+ak+tonmoy+''+key1
 		os.system('am start https://wa.me/+8801766804626?text=' + tks)
-		Subscraption() 
+		o() 
 Subscraption() 
  
